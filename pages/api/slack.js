@@ -2,7 +2,7 @@ import config from '../../config.json';
 
 const slack = async () => {
     try {
-        const url = config.urlIndices;
+        const url = 'https://indices-ipca-igpm.vercel.app/api/indices';
         const res = await fetch(url);
         const data = res.json();
 
