@@ -39,10 +39,7 @@ const Card = (props) => {
     let indice = '';
     let legenda = '';
 
-    const url =
-        props.type == 'ipca'
-            ? 'https://indices-api.herokuapp.com/ipca'
-            : 'https://indices-api.herokuapp.com/igpm';
+    const url = 'https://indices-ipca-igpm.vercel.app/api/indices';
 
     useEffect(() => {
         setLoading(true);
@@ -60,8 +57,13 @@ const Card = (props) => {
     }
 
     if (data) {
-        indice = data.valor;
-        legenda = data.titulo;
+        if (props.type == 'ipca') {
+            indice = data.indices[0].valor;
+            legenda = data.indices[0].titulo;
+        } else {
+            indice = data.indices[1].valor;
+            legenda = data.indices[1].titulo;
+        }
     }
 
     return (
