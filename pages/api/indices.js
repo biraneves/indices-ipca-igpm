@@ -46,10 +46,14 @@ const getIgpmAcumulado12 = async () => {
 const indices = async (_request, response) => {
     const res = {
         indices: [],
+        timestamp: '',
     };
 
     res.indices.push(await getIpcaAcumulado12());
     res.indices.push(await getIgpmAcumulado12());
+
+    const date = new Date();
+    res.timestamp = date.toISOString();
 
     response.setHeader(
         'Cache-Control',
