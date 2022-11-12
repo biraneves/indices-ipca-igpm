@@ -54,6 +54,7 @@ const Card = (props) => {
     if (isLoading) {
         indice = '...';
         legenda = 'carregando';
+        timestamp = '...';
     }
 
     if (data) {
@@ -64,6 +65,7 @@ const Card = (props) => {
             indice = data.indices[1].valor;
             legenda = data.indices[1].titulo;
         }
+        timestamp = data.timestamp;
     }
 
     return (
@@ -71,6 +73,7 @@ const Card = (props) => {
             <div>
                 <p className="indice">{indice}%</p>
                 <p className="legenda">{legenda}</p>
+                <p className="timestamp">{timestamp}</p>
             </div>
         </StyledCard>
     );
