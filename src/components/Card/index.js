@@ -43,6 +43,7 @@ const Card = (props) => {
 
     let indice = '';
     let legenda = '';
+    let timestamp = '';
 
     const url = 'https://indices-ipca-igpm.vercel.app/api/indices';
 
