@@ -33,7 +33,7 @@ const StyledCard = styled.div`
         text-transform: uppercase;
     }
     .timestamp {
-        font-size: 6pt;
+        font-size: 8pt;
         line-height: 10pt;
     }
 `;
