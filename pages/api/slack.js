@@ -69,7 +69,7 @@ const slack = async () => {
             ],
         };
 
-        return resposta;
+        return resposta.json();
     } catch (err) {
         throw new Error(err.message);
     }
