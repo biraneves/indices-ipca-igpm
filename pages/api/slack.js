@@ -1,7 +1,10 @@
-const slack = (_request, response) => {
+import axios from 'axios';
+import config from '../../config.json';
+
+const slack = async (_request, response) => {
     try {
-        const url = 'https://indices-ipca-igpm.vercel.app/api/indices';
-        const data = fetch(url).then((res) => res.json());
+        const url = config.urlIndices;
+        const data = await axios.get(url);
 
         const resposta = {
             response_type: 'in_channel',
@@ -26,14 +29,14 @@ const slack = (_request, response) => {
                     type: 'section',
                     text: {
                         type: 'mrkdwn',
-                        text: '- *IPCA:* ' + data.indices[0].valor + '%',
+                        text: '- *IPCA:* ' + data.data.indices[0].valor + '%',
                     },
                 },
                 {
                     type: 'section',
                     text: {
                         type: 'mrkdwn',
-                        text: '- *IGP-M:* ' + data.indices[1].valor + '%',
+                        text: '- *IGP-M:* ' + data.data.indices[1].valor + '%',
                     },
                 },
                 {
