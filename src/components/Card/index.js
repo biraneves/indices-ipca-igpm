@@ -14,7 +14,8 @@ const StyledCard = styled.div`
     align-items: center;
     gap: 16px;
     .indice,
-    .legenda {
+    .legenda,
+    .timestamp {
         font-family: Arial, Helvetica, sans-serif;
         text-align: center;
     }
@@ -32,8 +33,8 @@ const StyledCard = styled.div`
         text-transform: uppercase;
     }
     .timestamp {
-        font-size: 8pt;
-        line-height: 12pt;
+        font-size: 6pt;
+        line-height: 10pt;
     }
 `;
 
