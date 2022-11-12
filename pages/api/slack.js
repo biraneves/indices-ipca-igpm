@@ -1,4 +1,4 @@
-const slack = () => {
+const slack = (_request, response) => {
     try {
         const url = 'https://indices-ipca-igpm.vercel.app/api/indices';
         const data = fetch(url).then((res) => res.json());
@@ -66,7 +66,7 @@ const slack = () => {
             ],
         };
 
-        return resposta;
+        response.json(resposta);
     } catch (err) {
         throw new Error(err.message);
     }
