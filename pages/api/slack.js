@@ -62,7 +62,7 @@ const slack = async (_request, response) => {
                         type: 'mrkdwn',
                         text:
                             '_(Última atualização: ' +
-                            data.timestamp +
+                            data.data.timestamp +
                             ' (GMT))_',
                     },
                 },
