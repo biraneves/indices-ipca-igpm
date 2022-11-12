@@ -24,11 +24,16 @@ const StyledCard = styled.div`
         line-height: 32pt;
         color: #030;
     }
-    .legenda {
+    .legenda,
+    .timestamp {
         font-size: 12pt;
         line-height: 20pt;
         color: #888;
         text-transform: uppercase;
+    }
+    .timestamp {
+        font-size: 8pt;
+        line-height: 12pt;
     }
 `;
 
