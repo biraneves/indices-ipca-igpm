@@ -1,10 +1,7 @@
-import config from '../../config.json';
-
-const slack = async () => {
+const slack = () => {
     try {
         const url = 'https://indices-ipca-igpm.vercel.app/api/indices';
-        const res = await fetch(url);
-        const data = res.json();
+        const data = fetch(url).then((res) => res.json());
 
         const resposta = {
             response_type: 'in_channel',
@@ -69,7 +66,7 @@ const slack = async () => {
             ],
         };
 
-        return resposta.json();
+        return resposta;
     } catch (err) {
         throw new Error(err.message);
     }
