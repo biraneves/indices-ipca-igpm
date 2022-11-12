@@ -1,6 +1,6 @@
 import config from '../../config.json';
 
-const getSlackInfo = async () => {
+const slack = async () => {
     try {
         const url = config.urlIndices;
         const res = await fetch(url);
@@ -75,4 +75,4 @@ const getSlackInfo = async () => {
     }
 };
 
-export default getSlackInfo;
+export default slack;
