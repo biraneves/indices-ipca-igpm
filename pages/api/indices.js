@@ -53,9 +53,9 @@ const indices = async (_request, response) => {
     res.indices.push(await getIgpmAcumulado12());
 
     const date = new Date();
-    res.timestamp = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} - ${
-        date.getHours() - 3
-    }h ${date.getMinutes()}min`;
+    res.timestamp = `${date.getDate()}/${
+        date.getMonth() + 1
+    }/${date.getFullYear()} - ${date.getHours() - 3}h ${date.getMinutes()}min`;
 
     response.setHeader(
         'Cache-Control',
