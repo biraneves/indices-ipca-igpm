@@ -27,14 +27,22 @@ Outro motivador para a escolha do Next.js foi a intenção de desenvolver també
 
 ## _Endpoints_ da API
 
-### GET /indices
+### GET /api/indices
 
 Retorna um JSON contendo os valores dos índices IPCA e IGP-M, além do _timestamp_ em que os valores foram obtidos pela última vez, antes de armazenar em _cache_. Disponível em [https://indices-ipca-igpm.vercel.app/api/indices](https://indices-ipca-igpm.vercel.app/api/indices).
 
-### GET /slack
+### GET /api/slack
 
 Retorna um JSON com uma mensagem formatada para uso no Slack contendo as informações. Disponível em [https://indices-ipca-igpm.vercel.app/api/slack](https://indices-ipca-igpm.vercel.app/api/slack).
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/83148400/201526877-cf76c27c-fb17-495d-a0c5-cae8eb9b341f.png" />
+</div>
 
 ## _Front end_
 
 Foi desenvolvida uma página muito simples com React, com o único objetivo de ser um MVP de consumo da API. Disponível em [https://indices-ipca-igpm.vercel.app](https://indices-ipca-igpm.vercel.app).
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/83148400/201526964-3d8231a1-85d1-4477-a7dc-77c7c109e493.png" />
+</div>
