@@ -1,5 +1,7 @@
 <div align=center>
 
+<img src="https://user-images.githubusercontent.com/83148400/201528864-b3cfe5b2-16eb-4cea-b986-029a21458c07.png" />
+
 # 📈 Indicadores - IPCA & IGPM 📉
 
 </div>
