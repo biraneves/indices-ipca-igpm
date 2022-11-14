@@ -43,6 +43,22 @@ const getIgpmAcumulado12 = async () => {
     }
 };
 
+const getDolar = async () => {
+    try {
+        const url = config.urlMoedas;
+
+        const res = await axios.get(url);
+        const dados = {
+            titulo: 'dólar',
+            valor: parseFloat(res.data.USDBRL.ask),
+        };
+
+        return dados;
+    } catch (error) {
+        throw new Error(err.message);
+    }
+};
+
 const indices = async (_request, response) => {
     const res = {
         indices: [],
@@ -51,6 +67,7 @@ const indices = async (_request, response) => {
 
     res.indices.push(await getIpcaAcumulado12());
     res.indices.push(await getIgpmAcumulado12());
+    // res.indices.push(await getDolar());
 
     const date = new Date();
     res.timestamp = `${date.getDate()}/${

@@ -1,5 +1,6 @@
 {
     "urlIpca": "https://apisidra.ibge.gov.br/values/t/7060/n1/all/v/2265/p/last%201/c315/7169/d/v2265%202",
     "urlIgpm": "https://paineldeindices.com.br/indice/igpm/",
-    "urlIndices": "https://indices-ipca-igpm.vercel.app/api/indices"
+    "urlIndices": "https://indices-ipca-igpm.vercel.app/api/indices",
+    "urlMoedas": "https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL"
 }
